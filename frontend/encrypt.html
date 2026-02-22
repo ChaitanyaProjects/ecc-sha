@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encrypt Image</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-r from-slate-900 to-indigo-900 flex items-center justify-center text-white">
+
+  <div class="bg-white/10 backdrop-blur-xl p-10 rounded-2xl shadow-xl w-[420px]">
+    <h2 class="text-2xl font-bold mb-6 text-center">🔐 Encrypt Secret Message</h2>
+
+    <form id="encryptForm" class="space-y-4">
+      <textarea
+        name="secret_message"
+        placeholder="Enter secret message..."
+        class="w-full p-3 rounded-lg bg-black/30 border border-white/20 focus:outline-none"
+        required></textarea>
+
+      <input
+        type="file"
+        name="image"
+        accept=".jpg,.jpeg,.png"
+        class="w-full text-sm"
+        required />
+
+      <button
+        type="submit"
+        class="w-full bg-green-500 hover:bg-green-600 transition py-3 rounded-xl font-bold text-black">
+        Encrypt & Download
+      </button>
+    </form>
+
+    <p id="encryptStatus" class="text-center mt-4 text-sm"></p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
